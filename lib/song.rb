@@ -31,5 +31,11 @@ end
 def self.find_by_name(name)
     @@all.find {|song| song.name == name} 
   end 
-end
 
+def self.find_or_create_by_name 
+  if self.find_by_name(name)
+    self.find_by_name(name)
+  else
+    self.creat_by_name(name)
+  end
+end
