@@ -29,8 +29,8 @@ def self.create_by_name(name)
 end
 
 def self.find_by_name(name)
-  song = self.find 
-  song.name = name 
+ @all.each do |song|
+ if song.name == song 
   song 
 end
 end
